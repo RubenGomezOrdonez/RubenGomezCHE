@@ -1,0 +1,182 @@
+<html>
+
+<head>
+    <title>Pizza House - Voor de lekkerste pizza's</title>
+    <link href="../html/main.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="/assets/js/jquery.validate.min.js"></script>
+    <script src="/assets/js/form-validation.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/additional-methods.js"></script>
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+            .w3-bar-block .w3-bar-item {padding:20px}
+            hr {
+        color: #123455;
+    }
+    html { 
+      background: url(../images/abstract-antique-backdrop-164005.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    
+    .content {
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 0 auto;
+      margin-top: 60vh;
+      padding: 30px 0;
+      position: sticky;
+      bottom: 0;
+      min-height: calc(40vh);
+      border-top: 2px solid var(--vb-black-color);
+      width: 100%;
+    }
+    .font {
+        
+        font-family: 'Dancing Script', cursive;
+    }
+    .rondje {
+        border-radius: 100%;
+    }
+
+   .wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -86px;
+    margin-left: -89px;
+    text-align: center;
+}
+
+a {
+    -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    display: inline;
+    margin: 20px auto;
+    max-width: 180px;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 5px 15px;
+}
+
+a.button {
+    color: rgba(30, 22, 54, 0.6);
+    box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+}
+
+a.button:hover {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+}
+
+            </style>
+
+
+</head>
+
+<body>
+    <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px"
+        id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
+    <form action="/view/bewerkpagina"> <button href="/view/" onclick="w3_close()" class="w3-bar-item w3-button">Bewerken</button></form>
+        <form action="/view/customers"><button onclick="w3_close()" class="w3-bar-item w3-button">Klanten</button></form>
+        <form action="/view/orders"><button onclick="w3_close()" class="w3-bar-item w3-button">Orders</button></form>
+        
+        <form action="/view/"> <button onclick="w3_close()" class="w3-bar-item w3-button">Log uit</button></form>
+
+    </nav>
+
+    <!-- Top menu -->
+    <div class="w3-top">
+        <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto; background-color: rgba(255, 255, 255, 0.9)">
+            <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">&#9776;</div>
+            <div class="w3-right w3-padding-16"><a href="/view"><img src="../images/pizzahouse.png" height="100px" style="vertical-align:middle"></a></div>
+            <div class="w3-center w3-padding-16">
+                <h3 class="font"> Pizza House - Voor de lekkerste pizza's</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-main w3-content w3-padding content" style="max-width:1200px;margin-top:100px;">
+        <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+            <h1>Voeg hier een nieuwe ingredient:</h1>
+            <form methode="POST" action="/view/nieuwingredientterugkoppeling">
+                <p><select name="type">
+                        <option disabled selected value> -- selecteer een type -- </option>
+                        <option value="bodem">Bodem</option>
+                        <option value="saus">Saus</option>
+                        <option value="topping">Topping</option>
+                    </select></p>
+                <p><input name="name" placeholder="Naam van ingredient"></p>
+                <p><input type="number" step=0.01 min="0" name="price" placeholder="Prijs van Ingredient"></p>
+                <button type="submit">Toevoegen</button>
+            </form>
+            <a href="nieuwpizza">Terug naar nieuw pizza</a>
+        </div>
+    </div>
+    <div class="w3-main w3-content w3-padding content" style="max-width:1200px;margin-top:100px; position: static">
+        <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+
+            <h2>Verwijder een ingredient:</h2>
+            {{$bodem := index . "bodem"}}
+            <p><b>Bodems:</b></p>
+
+            {{range $bodem}}
+
+            {{.Name}} €{{.Price | printf "%.2f"}} | <form method="POST" action="/view/verwijderingredient"> <input name="naam"
+                    value="{{.Name}}" type="hidden"> <button type="submit">Verwijder {{.Name}}</button> </form>
+
+            {{end}}
+
+            <p><b>Toppings:</b></p>
+            {{$toppings := index . "topping"}}
+
+
+            {{range $toppings}}
+
+            {{.Name}} | €{{.Price | printf "%.2f"}} | <form method="POST" action="/view/verwijderingredient"> <input
+                    name="naam" value="{{.Name}}" type="hidden"> <button type="submit">Verwijder {{.Name}}</button>
+            </form>
+
+            {{end}}
+
+
+
+            {{$saus := index . "saus"}}
+            <p><b>Sausen:</b></p>
+            <p>
+
+                {{range $saus}}
+
+                {{.Name}} €{{.Price | printf "%.2f"}} | <form method="POST" action="/view/verwijderingredient"> <input
+                        name="naam" value="{{.Name}}" type="hidden"> <button type="submit">Verwijder {{.Name}}</button>
+                </form>
+
+                {{end}}
+                <a href="nieuwpizza">Terug naar nieuw pizza</a>
+        </div>
+    </div>
+    <br>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

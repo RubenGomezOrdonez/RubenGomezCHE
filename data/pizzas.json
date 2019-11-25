@@ -1,0 +1,289 @@
+[
+    {
+        "Name": "margherita",
+        "Aantal": 11,
+        "Price": 8.99,
+        "Image": "../images/Margarita.png",
+        "Ingredient": [
+            {
+                "type": "topping",
+                "name": "kaas",
+                "price": 0.5
+            }
+        ]
+    },
+    {
+        "Name": "siciliano",
+        "Aantal": 10,
+        "Price": 9.29,
+        "Image": "../images/siciliano.png",
+        "Ingredient": [
+            {
+                "type": "topping",
+                "name": "kaas",
+                "price": 0.5
+            },
+            {
+                "type": "topping",
+                "name": "ansjovis",
+                "price": 0.35
+            },
+            {
+                "type": "topping",
+                "name": "ui",
+                "price": 0.35
+            }
+        ]
+    },
+    {
+        "Name": "hawaii",
+        "Aantal": 9,
+        "Price": 9.99,
+        "Image": "../images/hawaii.png",
+        "Ingredient": [
+            {
+                "type": "topping",
+                "name": "kaas",
+                "price": 0.5
+            },
+            {
+                "type": "topping",
+                "name": "ananas",
+                "price": 0.35
+            },
+            {
+                "type": "topping",
+                "name": "Ham",
+                "price": 0.35
+            }
+        ]
+    },
+    {
+        "Name": "dönner",
+        "Aantal": 8,
+        "Price": 10.25,
+        "Image": "../images/Doner_Pizza-924.png",
+        "Ingredient": [
+            {
+                "type": "topping",
+                "name": "doner",
+                "price": 0.5
+            },
+            {
+                "type": "topping",
+                "name": "ui",
+                "price": 0.35
+            },
+            {
+                "type": "topping",
+                "name": "kaas",
+                "price": 0.35
+            }
+        ]
+    },
+    {
+        "Name": "hawaii zonder ananas",
+        "Aantal": 7,
+        "Price": 8.25,
+        "Image": "../images/depositphotos_16813655-stockafbeelding-pizza-ham-en-mozzarella.jpg",
+        "Ingredient": [
+            {
+                "type": "topping",
+                "name": "kaas",
+                "price": 0.5
+            },
+            {
+                "type": "topping",
+                "name": "Ham",
+                "price": 0.35
+            }
+        ]
+    },
+    {
+        "Name": "salami",
+        "Aantal": 6,
+        "Price": 8.55,
+        "Image": "../images/Salami_pizza-2887.png",
+        "Ingredient": [
+            {
+                "type": "topping",
+                "name": "kaas",
+                "price": 0.5
+            },
+            {
+                "type": "topping",
+                "name": "Salami",
+                "price": 0.35
+            }
+        ]
+    },
+    {
+        "Name": "quattro stagioni",
+        "Aantal": 5,
+        "Price": 11.26,
+        "Image": "../images/img61l.jpg",
+        "Ingredient": [
+            {
+                "type": "topping",
+                "name": "kaas",
+                "price": 0.5
+            },
+            {
+                "type": "topping",
+                "name": "geitenkaas",
+                "price": 0.35
+            },
+            {
+                "type": "topping",
+                "name": "cheddar",
+                "price": 0.35
+            },
+            {
+                "type": "topping",
+                "name": "gorgonzola",
+                "price": 0.35
+            }
+        ]
+    },
+    {
+        "Name": "marinara",
+        "Aantal": 4,
+        "Price": 7.25,
+        "Image": "../images/Marinara_07-1.jpg",
+        "Ingredient": [
+            {
+                "type": "topping",
+                "name": "kaas",
+                "price": 0.5
+            },
+            {
+                "type": "topping",
+                "name": "knoflook",
+                "price": 0.35
+            },
+            {
+                "type": "topping",
+                "name": "Basilicum",
+                "price": 0.35
+            }
+        ]
+    },
+    {
+        "Name": "carciofi",
+        "Aantal": 3,
+        "Price": 12.25,
+        "Image": "../images/DSC_6645.jpg",
+        "Ingredient": [
+            {
+                "type": "topping",
+                "name": "kaas",
+                "price": 0.5
+            },
+            {
+                "type": "topping",
+                "name": "artichoke",
+                "price": 0.35
+            }
+        ]
+    },
+    {
+        "Name": "funghi",
+        "Aantal": 2,
+        "Price": 11.25,
+        "Image": "../images/Pizza-funghi.jpg",
+        "Ingredient": [
+            {
+                "type": "topping",
+                "name": "kaas",
+                "price": 0.5
+            },
+            {
+                "type": "topping",
+                "name": "champion",
+                "price": 0.35
+            },
+            {
+                "type": "topping",
+                "name": "ham",
+                "price": 0.35
+            }
+        ]
+    },
+    {
+        "Name": "calzone",
+        "Aantal": 1,
+        "Price": 10.25,
+        "Image": "../images/Calzone-Pizza-Slices-e1459845640761.jpg",
+        "Ingredient": [
+            {
+                "type": "topping",
+                "name": "kaas",
+                "price": 0.5
+            },
+            {
+                "type": "topping",
+                "name": "ham",
+                "price": 0.35
+            }
+        ]
+    },
+    {
+        "Name": "capricciosa",
+        "Aantal": 0,
+        "Price": 9.25,
+        "Image": "../images/pizza-capricciosa.jpg",
+        "Ingredient": [
+            {
+                "type": "topping",
+                "name": "kaas",
+                "price": 0.5
+            },
+            {
+                "type": "topping",
+                "name": "ham",
+                "price": 0.35
+            },
+            {
+                "type": "topping",
+                "name": "artichoke",
+                "price": 0.35
+            },
+            {
+                "type": "topping",
+                "name": "anjovis",
+                "price": 0.35
+            }
+        ]
+    },
+    {
+        "Name": "napoli",
+        "Aantal": 0,
+        "Price": 11.26,
+        "Image": "../images/neapolitan-pizza-dough.jpg",
+        "Ingredient": [
+            {
+                "type": "topping",
+                "name": "Napoleon",
+                "price": 0.5
+            }
+        ]
+    },
+    {
+        "Name": "Sambal Pizza",
+        "Aantal": 0,
+        "Price": 7.99,
+        "Image": "https://images.newyorkpizza.nl/Products/Original/Mexican_Hot___Spicy_Pizza-1428.png",
+        "Ingredient": [
+            {
+                "type": "topping",
+                "name": "sambal",
+                "price": 0.5
+            },
+            {
+                "type": "topping",
+                "name": "ui",
+                "price": 0.35
+            }
+        ]
+    }
+]

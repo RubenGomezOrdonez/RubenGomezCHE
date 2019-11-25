@@ -1,0 +1,31 @@
+version: 0.1
+            
+phases:
+
+  install: 
+    commands:
+
+  pre_build: 
+    commands:
+
+      - go get -t -d -v ./...
+
+      # Run all tests included with our application
+      
+
+  build:
+    commands:
+
+      - COMMIT_SHA="$(echo $CODEBUILD_SOURCE_VERSION | head -c 8)"
+      - echo "<h4>Commit ID:" $COMMIT_SHA "</h4>"> html/COMMIT_SHA.html
+
+      # Build our application
+      - go build -o application
+
+artifacts:
+  files:
+    - application
+    - data/*
+    - html/*
+    - images/*
+    - templates/*
